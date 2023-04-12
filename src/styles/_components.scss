@@ -1,0 +1,88 @@
+.icon {
+    --icon-fz: var(--fz-md);
+    --icon-clr: var(--clr-gray-900);
+    --icon-bg-clr: var(--clr-gray-100);
+
+    --icon-size: clamp(2.25rem, 1rem + 2vw, 2.5rem);
+    --icon-border-radius: 50%;
+
+    color: var(--icon-clr);
+    background-color: var(--icon-bg-clr);
+    border-radius: var(--icon-border-radius);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: grid;
+    place-items: center;
+}
+
+.icon-success {
+    --icon-clr: var(--clr-gray-50);
+    --icon-bg-clr: var(--clr-success-800);
+}
+
+.card-grid {
+    --card-grid-gap: var(--size-v-400);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--card-grid-gap);
+}
+
+.card {
+    --card-clr: var(--clr-gray-900);
+    --card-bg-clr: var(--clr-gray-100);
+
+    --card-width: 30%;
+    --card-padding: var(--size-v-400);
+    --card-border-radius: var(--size-v-400);
+    --card-img-border: 0.01em solid var(--clr-gray-400);
+
+    max-width: var(--card-width);
+    color: var(--card-clr);
+    background-color: var(--card-bg-clr);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        --card-clr: var(--clr-gray-50);
+        --card-bg-clr: var(--clr-primary-500);
+        --card-img-border: 0.01em solid var(--clr-primary-500);
+    }
+
+    .icon-card {
+        position: absolute;
+        top: var(--card-padding);
+        right: var(--card-padding);
+        z-index: 1;
+    }
+
+    .card-image {
+        margin-inline: auto;
+        overflow: hidden;
+        border: var(--card-img-border);
+        border-radius: var(--card-border-radius);
+        position: relative;
+    }
+
+    .card-overlay {
+        color: var(--clr-gray-50);
+        background-color: var(--clr-gray-900);
+        opacity: 0.5;
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+
+        .card-overlay-content {
+            transform: rotate(-15deg);
+            transform-origin: center;
+        }
+    }
+}
+
+.card-success {
+    --card-bg-clr: var(--clr-success-100);
+    --card-img-border: 0.01em solid var(--clr-success-100);
+}
