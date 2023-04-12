@@ -70,7 +70,7 @@ body,
 
 .container {
   --container-padding-inline: var(--size-v-400);
-  --container-width: var(--bp-desktop);
+  --container-width: var(--bp-desktop-l);
 
   padding-inline: var(--container-padding-inline);
   margin-inline: auto;

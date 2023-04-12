@@ -134,8 +134,8 @@ $font-families: (
 /// Fonts - Font Sizes
 $font-sizes: (
   "base": 16px,
-  "reg": clamp(1rem, 1rem + 2vw, 1.25rem), // 16px / 20px
-  "md": clamp(1.5rem, 1rem + 2vw, 2.25rem), // 24px / 36px
+  "md": clamp(1rem, 1rem + 2vw, 1.25rem), // 16px / 20px
+  "lg": clamp(1.5rem, 1rem + 2vw, 2.25rem), // 24px / 36px
   "xl": clamp(3rem, 1rem + 2vw, 4rem), // 48px / 64px
 );
 
