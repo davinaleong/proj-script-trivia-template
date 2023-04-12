@@ -1,0 +1,253 @@
+/// Variables
+
+/// Palatte
+$palatte: (
+  "gray-50": (
+    "hex": #FFFFFF,
+    "hsl": hsl(0, 0%, 100%),
+  ),
+  "gray-900": (
+    "hex": #000000,
+    "hsl": hsl(0, 0%, 0%),
+  ),
+  "gray-100": (
+    "hex": #F5F5F5,
+    "hsl": hsl(0, 0%, 96%),
+  ),
+  "gray-200": (
+    "hex": #EEEEEE,
+    "hsl": hsl(0, 0%, 93%),
+  ),
+  "gray-300": (
+    "hex": #DDDDDD,
+    "hsl": hsl(0, 0%, 87%),
+  ),
+  "gray-400": (
+    "hex": #CCCCCC,
+    "hsl": hsl(0, 0%, 80%),
+  ),
+  "gray-500": (
+    "hex": #999999,
+    "hsl": hsl(0, 0%, 60%),
+  ),
+  "primary-200": (
+    "hex": #2188FF,
+    "hsl": hsl(212, 100%, 56%),
+  ),
+  "primary-400": (
+    "hex": #005CC5,
+    "hsl": hsl(212, 100%, 39%),
+  ),
+  "success-50": (
+    "hex": #CBEED5,
+    "hsl": hsl(137, 51%, 86%),
+  ),
+  "success-200": (
+    "hex": #62E185,
+    "hsl": hsl(137, 68%, 63%),
+  ),
+  "success-400": (
+    "hex": #138934,
+    "hsl": hsl(137, 76%, 31%),
+  ),
+  "danger-200": (
+    "hex": #F9707B,
+    "hsl": hsl(355, 92%, 71%),
+  ),
+  "danger-400": (
+    "hex": #CB2431,
+    "hsl": hsl(355, 70%, 47%),
+  ),
+);
+
+/// Colors
+$colors: (
+  "primary": (
+    "50": hsl(212, 100%, 99%),
+    "100": hsl(212, 100%, 96%),
+    "200": hsl(212, 100%, 93%),
+    "300": hsl(212, 100%, 88%),
+    "400": hsl(212, 100%, 74%),
+    "500": hsl(212, 100%, 56%), // Primary Hover
+    "600": hsl(212, 100%, 46%),
+    "700": hsl(212, 100%, 39%), // Primary
+    "800": hsl(212, 100%, 26%),
+    "900": hsl(212, 100%, 10%),
+  ),
+  "gray": (
+    "50": hsl(0, 0%, 100%), // White
+    "100": hsl(0, 0%, 96%), // Sidebar Background
+    "200": hsl(0, 0%, 93%),
+    "300": hsl(0, 0%, 87%), // Answer Hover
+    "400": hsl(0, 0%, 80%), // Answer
+    "500": hsl(0, 0%, 60%),
+    "600": hsl(0, 0%, 46%),
+    "700": hsl(0, 0%, 38%),
+    "800": hsl(0, 0%, 26%),
+    "900": hsl(0, 0%, 0%),  // Black
+  ),
+  "danger": (
+    "50": hsl(355, 100%, 96%),
+    "100": hsl(355, 100%, 90%),
+    "200": hsl(355, 73%, 77%), // Danger Hover
+    "300": hsl(355, 69%, 67%),
+    "400": hsl(355, 83%, 63%),
+    "500": hsl(355, 90%, 58%),
+    "600": hsl(355, 77%, 55%),
+    "700": hsl(355, 65%, 51%),
+    "800": hsl(355, 70%, 47%), // Danger
+    "900": hsl(355, 73%, 41%),
+  ),
+  "success": (
+    "50": hsl(137, 39%, 94%),
+    "100": hsl(137, 38%, 84%), // Success Background
+    "200": hsl(137, 37%, 74%),
+    "300": hsl(137, 38%, 64%), // Success Hover
+    "400": hsl(137, 38%, 57%),
+    "500": hsl(137, 39%, 49%),
+    "600": hsl(137, 41%, 45%),
+    "700": hsl(137, 43%, 39%),
+    "800": hsl(137, 76%, 31%), // Success
+    "900": hsl(137, 55%, 24%),
+  ),
+);
+
+/// Fonts
+/// Fonts - Font Families
+$font-families: (
+  "primary": #{Inter, Arial, sans-serif},
+  "secondary": #{"Indie Flower", "Comic Sans", sans-serif},
+);
+
+/// Fonts - Font Sizes
+$font-sizes: (
+  "base": 16px,
+  "copyright": clamp(0.6rem, 1rem + 2vw, 1.125rem),
+  "form-status": clamp(0.6rem, 1rem + 2vw, 1.125rem),
+  "pagination": clamp(0.6rem, 1rem + 2vw, 1.125rem),
+  "body": clamp(0.8rem, 1rem + 2vw, 1.5rem),
+  "close-modal": clamp(1.2rem, 1rem + 2vw, 2rem),
+  "article-date": clamp(0.6rem, 1rem + 2vw, 1.25rem),
+  "section-heading": clamp(0.8rem, 1rem + 2vw, 1.5rem),
+  "article-heading": clamp(2.5rem, 1rem + 3vw, 2.5rem),
+  "loader-heading": clamp(2.5rem, 1rem + 3vw, 2.5rem),
+  "sub-heading": clamp(2.5rem, 1rem + 3vw, 3.75rem),
+  "modal-heading": clamp(2.5rem, 1rem + 3vw, 3.75rem),
+  "hero-heading": clamp(4.75rem, 1rem + 5vw, 6.25rem),
+
+  "h1": clamp(3.375rem, 1rem + 3vw, 4rem),
+  "h2": clamp(2.875rem, 1rem + 3vw, 3.5rem),
+  "h3": clamp(2.175rem, 1rem + 3vw, 2.8rem),
+  "h4": clamp(1.875rem, 1rem + 3vw, 2.5rem),
+  "h5": clamp(1.375rem, 1rem + 3vw, 2rem),
+  "h6": clamp(1.3rem, 1rem + 3vw, 1.8rem),
+  "small": clamp(0.6rem, 1rem + 2vw, 1.125rem),
+);
+
+/// Fonts - Font Weights
+$font-weights: (
+  "100": 100,
+  "thin": 100,
+  "200": 200,
+  "extra-light": 200,
+  "300": 300,
+  "light": 300,
+  "400": 400,
+  "regular": 400,
+  "500": 500,
+  "medium": 500,
+  "600": 600,
+  "semibold": 600,
+  "700": 700,
+  "bold": 700,
+  "800": 800,
+  "extrabold": 800,
+  "900": 900,
+  "black": 900,
+);
+
+/// Fonts - Font Styles
+$font-styles: (
+  "normal": normal,
+  "italic": italic,
+  "oblique": italic,
+);
+
+/// Text
+/// Text - Text Decorations
+$text-decorations: (
+  "none": none,
+  "underline": underline,
+);
+
+/// Text - Text Alignments
+$text-aligns: (
+  "left": left,
+  "center": center,
+  "right": right,
+);
+
+/// Text - Text Transforms
+$text-transforms: (
+  "none": none,
+  "uppercase": uppercase,
+  "lowercase": lowercase,
+  "capitalize": capitalize,
+);
+
+/// Breakpoints
+$breakpoints: (
+  "phone": 18.75em,
+  "phone-l": 37.5em,
+  "tablet": 56.25em,
+  "desktop": 75em,
+  "desktop-l": 100em,
+);
+
+/// Spacers
+/// Spacers - Fixed Spacer
+$fixed-unit: 1rem;
+$fixed-spacers: (
+  "0": $fixed-unit * 0,
+  "100": $fixed-unit * 0.1,
+  "200": $fixed-unit * 0.25,
+  "300": $fixed-unit * 0.5,
+  "400": $fixed-unit * 1,
+  "500": $fixed-unit * 2,
+  "600": $fixed-unit * 5,
+  "700": $fixed-unit * 8,
+  "800": $fixed-unit * 12,
+  "900": $fixed-unit * 15,
+  "1000": $fixed-unit * 18,
+  "auto": auto,
+);
+
+/// Spacers - Variable Spacer
+$variable-unit: 1em;
+$variable-spacers: (
+  "0": $variable-unit * 0,
+  "100": $variable-unit * 0.1,
+  "200": $variable-unit * 0.25,
+  "300": $variable-unit * 0.5,
+  "400": $variable-unit * 1,
+  "500": $variable-unit * 2,
+  "600": $variable-unit * 5,
+  "700": $variable-unit * 8,
+  "800": $variable-unit * 12,
+  "900": $variable-unit * 15,
+  "1000": $variable-unit * 18,
+  "auto": auto,
+);
+
+/// Displays
+$displays: (
+  "none": none,
+  "inline": inline,
+  "block": block,
+  "inline-block": inline-block,
+  "flex": flex,
+  "inline-flex": inline-flex,
+  "grid": grid,
+  "inline-grid": inline-grid,
+);
+
