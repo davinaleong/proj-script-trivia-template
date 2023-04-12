@@ -134,26 +134,9 @@ $font-families: (
 /// Fonts - Font Sizes
 $font-sizes: (
   "base": 16px,
-  "copyright": clamp(0.6rem, 1rem + 2vw, 1.125rem),
-  "form-status": clamp(0.6rem, 1rem + 2vw, 1.125rem),
-  "pagination": clamp(0.6rem, 1rem + 2vw, 1.125rem),
-  "body": clamp(0.8rem, 1rem + 2vw, 1.5rem),
-  "close-modal": clamp(1.2rem, 1rem + 2vw, 2rem),
-  "article-date": clamp(0.6rem, 1rem + 2vw, 1.25rem),
-  "section-heading": clamp(0.8rem, 1rem + 2vw, 1.5rem),
-  "article-heading": clamp(2.5rem, 1rem + 3vw, 2.5rem),
-  "loader-heading": clamp(2.5rem, 1rem + 3vw, 2.5rem),
-  "sub-heading": clamp(2.5rem, 1rem + 3vw, 3.75rem),
-  "modal-heading": clamp(2.5rem, 1rem + 3vw, 3.75rem),
-  "hero-heading": clamp(4.75rem, 1rem + 5vw, 6.25rem),
-
-  "h1": clamp(3.375rem, 1rem + 3vw, 4rem),
-  "h2": clamp(2.875rem, 1rem + 3vw, 3.5rem),
-  "h3": clamp(2.175rem, 1rem + 3vw, 2.8rem),
-  "h4": clamp(1.875rem, 1rem + 3vw, 2.5rem),
-  "h5": clamp(1.375rem, 1rem + 3vw, 2rem),
-  "h6": clamp(1.3rem, 1rem + 3vw, 1.8rem),
-  "small": clamp(0.6rem, 1rem + 2vw, 1.125rem),
+  "reg": clamp(1rem, 1rem + 2vw, 1.25rem), // 16px / 20px
+  "md": clamp(1.5rem, 1rem + 2vw, 2.25rem), // 24px / 36px
+  "xl": clamp(3rem, 1rem + 2vw, 4rem), // 48px / 64px
 );
 
 /// Fonts - Font Weights
