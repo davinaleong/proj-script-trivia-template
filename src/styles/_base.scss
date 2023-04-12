@@ -41,10 +41,6 @@
   @each $key, $value in $breakpoints {
     --bp-#{$key}: #{$value};
   }
-
-  --primary-header-height: 5rem;
-  --primary-header-expanded-height: 25rem;
-  --primary-footer-height: 6.563rem;
 }
 
 html {
