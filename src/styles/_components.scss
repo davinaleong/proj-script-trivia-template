@@ -60,7 +60,7 @@
     position: relative;
     cursor: pointer;
 
-    &:hover, &-active, &[data-active="true"] {
+    &:hover, .active, &[data-active="true"] {
         --card-clr: var(--card-hover-clr);
         --card-bg-clr: var(--card-hover-bg-clr);
         --card-img-border: var(--card-hover-img-border);
