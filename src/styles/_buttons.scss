@@ -15,6 +15,7 @@
     --btn-fz: var(--fz-reg);
     --btn-fw: var(--fw-bold);
     --btn-tt: uppercase;
+    --btn-offset: var(--size-v-400);
 
     display: inline-flex;
     align-items: center;
@@ -37,13 +38,6 @@
         color: var(--btn-hover-clr);
         background-color: var(--btn-hover-bg-clr);
     }
-}
-
-.btn-fixed {
-    --btn-offset: var(--size-v-400);
-
-    position: fixed;
-    z-index: 3;
 
     &-top {
         top: var(--btn-offset);
@@ -64,6 +58,23 @@
         left: auto;
         right: var(--btn-offset);
     }
+}
+
+.btn-no-padding {
+    --btn-padding: 0;
+}
+
+.btn-fixed {
+    position: fixed;
+    z-index: 3;
+    isolation: isolate;
+
+}
+
+.btn-absolute {
+    position: absolute;
+    z-index: 3;
+    isolation: isolate;
 }
 
 .btn-primary {

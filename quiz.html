@@ -12,63 +12,74 @@
     <link rel="icon" type="image/svg+xml" href="./src/assets/images/logo-blue-svg.svg" />
     <link rel="stylesheet" href="./src/styles/main.scss">
     <script src="https://kit.fontawesome.com/1b82ea5cb2.js" crossorigin="anonymous"></script>
+    <script defer src="./src/scripts/main.js"></script>
 </head>
-<body class="quiz">
-    <button type="button" class="btn btn-primary btn-icon btn-fixed btn-fixed-top btn-fixed-right shadow-v-br-300">
+<body class="quiz-body">
+    <button type="button" class="btn btn-primary btn-icon btn-fixed btn-top btn-right shadow-v-br-300">
         <p class="btn-icon__label">Help</p>
         <i class="fa-solid fa-question"></i>
     </button>
-    <button type="button" class="btn btn-primary btn-icon btn-fixed btn-fixed-bottom btn-fixed-right shadow-v-br-300">
-        <p class="btn-icon__label">Submit</p>
-        <i class="fa-solid fa-check"></i>
-    </button>
-    <aside class="answers-grid bg-gray-100 p-v-300">
-        <div class="answer | ta-center">
-            <h2 class="fw-black fz-lg">HTML</h2>
+    <div class="quiz">
+        <main class="quiz__main main p-v-300">
+            <button type="button" class="btn btn-primary btn-icon btn-absolute btn-bottom btn-right shadow-v-br-300">
+                <p class="btn-icon__label">Submit</p>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+            <div class="alert alert-danger | shadow-v-br-300" data-element="alert">
+                <button type="button" class="btn btn-danger btn-no-padding btn-icon btn-absolute btn-top btn-right" data-element="btn-close-alert">
+                    <p class="visually-hidden">Close</p> <i class="fa-solid fa-times"></i>
+                </button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, enim? Facere blanditiis porro quo totam dolorum hic cum, ex a.</p>
+            </div>
             
-            <div class="d-flex al-center jc-center gap-v-400">
-                <button type="button" class="btn btn-icon">
-                    <p class="btn-icon__label">Answers</p>
-                    <i class="fa-solid fa-brightness"></i>
-                </button>
+            <h1 class="ff-secondary fz-lg ta-center">Quiz Title</h1>        
+        </main>
+        <aside class="quiz__aside answers-grid bg-gray-100 p-v-300">
+            <div class="answer | ta-center">
+                <h2 class="fw-black fz-lg">HTML</h2>
+                
+                <div class="d-flex al-center jc-center gap-v-400">
+                    <button type="button" class="btn btn-icon">
+                        <p class="btn-icon__label">Answers</p>
+                        <i class="fa-solid fa-brightness"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-
-        <div class="answer | ta-center">
-            <h2 class="fw-black fz-lg">CSS</h2>
-
-            <div class="d-flex al-center jc-center gap-v-400">
-                <button type="button" class="btn btn-icon">
-                    <p class="btn-icon__label">Answers</p>
-                    <i class="fa-solid fa-brightness"></i>
-                </button>
+    
+            <div class="answer | ta-center">
+                <h2 class="fw-black fz-lg">CSS</h2>
+    
+                <div class="d-flex al-center jc-center gap-v-400">
+                    <button type="button" class="btn btn-icon">
+                        <p class="btn-icon__label">Answers</p>
+                        <i class="fa-solid fa-brightness"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-
-        <div class="answer | ta-center">
-            <h2 class="fw-black fz-lg">JS</h2>
-
-            <div class="d-flex al-center jc-center gap-v-400">
-                <button type="button" class="btn btn-icon">
-                    <p class="btn-icon__label">Answers</p>
-                    <i class="fa-solid fa-brightness"></i>
-                </button>
+    
+            <div class="answer | ta-center">
+                <h2 class="fw-black fz-lg">JS</h2>
+    
+                <div class="d-flex al-center jc-center gap-v-400">
+                    <button type="button" class="btn btn-icon">
+                        <p class="btn-icon__label">Answers</p>
+                        <i class="fa-solid fa-brightness"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-
-        <div class="answer | ta-center">
-            <h2 class="fw-black fz-lg">PHP</h2>
-
-            <div class="d-flex al-center jc-center gap-v-400">
-                <button type="button" class="btn btn-icon">
-                    <p class="btn-icon__label">Answers</p>
-                    <i class="fa-solid fa-brightness"></i>
-                </button>
+    
+            <div class="answer | ta-center">
+                <h2 class="fw-black fz-lg">PHP</h2>
+    
+                <div class="d-flex al-center jc-center gap-v-400">
+                    <button type="button" class="btn btn-icon">
+                        <p class="btn-icon__label">Answers</p>
+                        <i class="fa-solid fa-brightness"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-    </aside>
-    <main class="main">
-        <h1 class="ff-secondary fs-lg ta-center">Quiz Title</h1>        
-    </main>
+        </aside>
+    </div>
 </body>
 </html>
