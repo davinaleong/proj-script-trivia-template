@@ -43,6 +43,7 @@
   }
 }
 
+/// Base - HTML & Body
 html {
   scroll-behavior: smooth;
 }
@@ -61,28 +62,39 @@ body,
   outline: 3px solid var(--clr-secondary-400);
 }
 
+/// Base - Containers
 .container-fluid {
   --container-padding-inline: var(--size-v-400);
 
   padding-inline: var(--container-padding-inline);
   margin-inline: auto;
+  position: relative;
 }
 
 .container {
   --container-padding-inline: var(--size-v-400);
-  --container-width: var(--bp-desktop-l);
+  --container-width: #{breakpoint('lg')};
 
   padding-inline: var(--container-padding-inline);
   margin-inline: auto;
   width: min(100%, var(--container-width));
+  position: relative;
 }
 
 .container-no-padding {
   --container-padding-inline: var(--size-v-0);
 }
 
+/// Base - Main
 .main {
   min-height: calc(
     100vh - var(--primary-header-height) - var(--primary-footer-height)
   );
+  container-name: main;
+  container-type: inline-size;
+}
+
+.main-quiz {
+  display: grid;
+  grid-template-rows: auto max-content;
 }

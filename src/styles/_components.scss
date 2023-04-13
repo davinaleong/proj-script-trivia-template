@@ -24,9 +24,15 @@
 }
 
 /// Components - Containers
-.answers {
-  container-name: answers;
-  container-type: inline-size;
+.answers-grid {
+    --answers-bg-clr: var(--clr-gray-100);
+    --answers-grid-align-items: end;
+    --answers-grid-justify-content: space-between;
+
+    display: flex;
+    align-items: var(--answers-grid-align-items);
+    justify-content: var(--answers-grid-justify-content);
+    background-color: var(--answers-bg-clr);
 }
 
 .card-grid {
@@ -106,14 +112,6 @@
 }
 
 /// Components - Queries
-@container answers (min-width: #{breakpoint('md')}) {
-    .btn-icon {
-        &__label {
-            display: block;
-        }
-    }
-}
-
 @container cardGrid (min-width: #{breakpoint('sm')}) {
     .card {
         --card-width: 45%;
