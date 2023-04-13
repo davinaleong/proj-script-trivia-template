@@ -201,6 +201,19 @@ $breakpoints: (
 );
 
 /// Spacers
+/// Spacers - Direction
+$spacer-directions: (
+  "all": "",
+  "block": "block",
+  "inline": "inline",
+  "x": "x",
+  "y": "y",
+  "top": "t",
+  "right": "r",
+  "bottom": "b",
+  "left": "l",
+);
+
 /// Spacers - Fixed Spacer
 $fixed-unit: 1rem;
 $fixed-spacers: (
@@ -245,6 +258,52 @@ $displays: (
   "inline-flex": inline-flex,
   "grid": grid,
   "inline-grid": inline-grid,
+);
+
+/// Flex/Grid Alignments
+$grid-flex-align-items: (
+  "inital": inital,
+  "inherit": inherit,
+  "normal": normal,
+  "start": start,
+  "center": center,
+  "end": end,
+  "stretch": stretch,
+  "baseline": baseline,
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+);
+
+$flex-justify-contents: (
+  "inital": inital,
+  "inherit": inherit,
+  "center": center,
+  "space-between": space-between,
+  "space-around": space-around,
+  "space-evenly": space-evenly,
+  "flex-start": flex-start,
+  "flex-end": flex-end,
+);
+
+$grid-justify-items: (
+  "inital": inital,
+  "inherit": inherit,
+  "legacy": legacy,
+  "normal": normal,
+  "stretch": stretch,
+  "start": start,
+  "left": left,
+  "center": center,
+  "right": right,
+  "end": end,
+  "overflow-alignment": overflow-alignment,
+  "baseline-alignment": baseline-alignment,
+);
+
+$flex-wraps: (
+  "nowrap": nowrap,
+  "wrap": wrap,
+  "reverse": wrap-reverse,
 );
 
 /// Box Shadows

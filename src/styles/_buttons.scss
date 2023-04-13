@@ -102,10 +102,6 @@
 
 /// Buttons - Containers
 .btn-container {
-    --btn-container-align-items: start;
-    --btn-container-justify-content: start;
-    --btn-container-gap: var(--size-v-400);
-
     display: flex;
     flex-wrap: wrap;
     align-items: var(--btn-container-align-items);

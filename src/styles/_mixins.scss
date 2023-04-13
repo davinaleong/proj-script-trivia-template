@@ -1,5 +1,93 @@
 /// Mixins
 
+/// Mixins - Spacers
+@mixin margin($direction, $weight) {
+    @if ($direction == "all") {
+        margin-top: $weight;
+        margin-right: $weight;
+        margin-bottom: $weight;
+        margin-left: $weight;
+    }
+
+    @if ($direction == "block") {
+        margin-block: $weight;
+    }
+
+    @if ($direction == "inline") {
+        margin-inline: $weight;
+    }
+
+    @if ($direction == "x") {
+        margin-right: $weight;
+        margin-left: $weight;
+    }
+
+    @if ($direction == "y") {
+        margin-top: $weight;
+        margin-bottom: $weight;
+    }
+
+    @if ($direction == "top") {
+        margin-top: $weight;
+    }
+
+    @if ($direction == "right") {
+        margin-right: $weight;
+    }
+
+    @if ($direction == "bottom") {
+        margin-bottom: $weight;
+    }
+
+    @if ($direction == "left") {
+        margin-left: $weight;
+    }
+}
+
+@mixin padding($direction, $weight) {
+    @if ($direction == "all") {
+        padding-top: $weight;
+        padding-right: $weight;
+        padding-bottom: $weight;
+        padding-left: $weight;
+    }
+
+    @if ($direction == "block") {
+        padding-block: $weight;
+    }
+
+    @if ($direction == "inline") {
+        padding-inline: $weight;
+    }
+
+    @if ($direction == "x") {
+        padding-right: $weight;
+        padding-left: $weight;
+    }
+
+    @if ($direction == "y") {
+        padding-top: $weight;
+        padding-bottom: $weight;
+    }
+
+    @if ($direction == "t") {
+        padding-top: $weight;
+    }
+
+    @if ($direction == "r") {
+        padding-right: $weight;
+    }
+
+    @if ($direction == "b") {
+        padding-bottom: $weight;
+    }
+
+    @if ($direction == "l") {
+        padding-left: $weight;
+    }
+}
+
+
 /// Mixins - Box Shadow
 @mixin box-shadow($direction, $weight, $blur: 1.5) {
     $x: 0;

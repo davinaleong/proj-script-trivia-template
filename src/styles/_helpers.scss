@@ -135,179 +135,258 @@
   }
 }
 
-/// Helpers - Fixed Spacers
+/// Helpers - Flex/Grid Alignment
+@each $key, $value in $flex-wraps {
+  .wrap-#{$key} {
+    flex-wrap: $value;
+  }
+}
+
 @each $key, $value in $fixed-spacers {
-  /// Helpers - Fixed Spacers - Margins
-  .m-f-#{$key} {
-    margin-top: var(--size-f-#{$key});
-    margin-right: var(--size-f-#{$key});
-    margin-bottom: var(--size-f-#{$key});
-    margin-left: var(--size-f-#{$key});
-  }
-
-  .m-f-x-#{$key} {
-    margin-right: var(--size-f-#{$key});
-    margin-left: var(--size-f-#{$key});
-  }
-
-  .m-f-y-#{$key} {
-    margin-top: var(--size-f-#{$key});
-    margin-bottom: var(--size-f-#{$key});
-  }
-
-  .m-f-block-#{$key} {
-    margin-block: var(--size-f-#{$key});
-  }
-
-  .m-f-inline-#{$key} {
-    margin-inline: var(--size-f-#{$key});
-  }
-
-  .m-f-t-#{$key} {
-    margin-top: var(--size-f-#{$key});
-  }
-
-  .m-f-r-#{$key} {
-    margin-right: var(--size-f-#{$key});
-  }
-
-  .m-f-b-#{$key} {
-    margin-bottom: var(--size-f-#{$key});
-  }
-
-  .m-f-l-#{$key} {
-    margin-left: var(--size-f-#{$key});
-  }
-
-  /// Helpers - Fixed Spacers - Paddings
-  .p-f-#{$key} {
-    padding-top: var(--size-f-#{$key});
-    padding-right: var(--size-f-#{$key});
-    padding-bottom: var(--size-f-#{$key});
-    padding-left: var(--size-f-#{$key});
-  }
-
-  .p-f-x-#{$key} {
-    padding-right: var(--size-f-#{$key});
-    padding-left: var(--size-f-#{$key});
-  }
-
-  .p-f-y-#{$key} {
-    padding-top: var(--size-f-#{$key});
-    padding-bottom: var(--size-f-#{$key});
-  }
-
-  .p-f-block-#{$key} {
-    padding-block: var(--size-f-#{$key});
-  }
-
-  .p-f-inline-#{$key} {
-    padding-inline: var(--size-f-#{$key});
-  }
-
-  .p-f-t-#{$key} {
-    padding-top: var(--size-f-#{$key});
-  }
-
-  .p-f-r-#{$key} {
-    padding-right: var(--size-f-#{$key});
-  }
-
-  .p-f-b-#{$key} {
-    padding-bottom: var(--size-f-#{$key});
-  }
-
-  .p-f-l-#{$key} {
-    padding-left: var(--size-f-#{$key});
+  .gap-f-#{$key} {
+    gap: $value;
   }
 }
 
-/// Helpers - Variable Spacers
 @each $key, $value in $variable-spacers {
-  /// Helpers - Variable Spacers - Margins
-  .m-v-#{$key} {
-    margin-top: var(--size-v-#{$key});
-    margin-right: var(--size-v-#{$key});
-    margin-bottom: var(--size-v-#{$key});
-    margin-left: var(--size-v-#{$key});
-  }
-
-  .m-v-x-#{$key} {
-    margin-right: var(--size-v-#{$key});
-    margin-left: var(--size-v-#{$key});
-  }
-
-  .m-v-y-#{$key} {
-    margin-top: var(--size-v-#{$key});
-    margin-bottom: var(--size-v-#{$key});
-  }
-
-  .m-v-block-#{$key} {
-    margin-block: var(--size-v-#{$key});
-  }
-
-  .m-v-inline-#{$key} {
-    margin-inline: var(--size-v-#{$key});
-  }
-
-  .m-v-t-#{$key} {
-    margin-top: var(--size-v-#{$key});
-  }
-
-  .m-v-r-#{$key} {
-    margin-right: var(--size-v-#{$key});
-  }
-
-  .m-v-b-#{$key} {
-    margin-bottom: var(--size-v-#{$key});
-  }
-
-  .m-v-l-#{$key} {
-    margin-left: var(--size-v-#{$key});
-  }
-
-  /// Helpers - Variable Spacers - Paddings
-  .p-v-#{$key} {
-    padding-top: var(--size-v-#{$key});
-    padding-right: var(--size-v-#{$key});
-    padding-bottom: var(--size-v-#{$key});
-    padding-left: var(--size-v-#{$key});
-  }
-
-  .p-v-x-#{$key} {
-    padding-right: var(--size-v-#{$key});
-    padding-left: var(--size-v-#{$key});
-  }
-
-  .p-v-y-#{$key} {
-    padding-top: var(--size-v-#{$key});
-    padding-bottom: var(--size-v-#{$key});
-  }
-
-  .p-v-block-#{$key} {
-    padding-block: var(--size-v-#{$key});
-  }
-
-  .p-v-inline-#{$key} {
-    padding-inline: var(--size-v-#{$key});
-  }
-
-  .p-v-t-#{$key} {
-    padding-top: var(--size-v-#{$key});
-  }
-
-  .p-v-r-#{$key} {
-    padding-right: var(--size-v-#{$key});
-  }
-
-  .p-v-b-#{$key} {
-    padding-bottom: var(--size-v-#{$key});
-  }
-
-  .p-v-l-#{$key} {
-    padding-left: var(--size-v-#{$key});
+  .gap-v-#{$key} {
+    gap: $value;
   }
 }
+
+@each $key, $value in $grid-flex-align-items {
+  .al-#{$key} {
+    align-items: $value;
+  }
+}
+
+@each $key, $value in $flex-justify-contents {
+  .jc-#{$key} {
+    justify-content: $value;
+  }
+}
+
+@each $key, $value in $grid-justify-items {
+  .ji-#{$key} {
+    justify-items: $value;
+  }
+}
+
+/// Helpers - Fixed Spacers
+@each $key, $value in $spacer-directions {
+  @each $weight-key, $weight-value in $fixed-spacers {
+    @if ($key != "all") {
+      .m-f-#{$value}-#{$weight-key} {
+        @include margin($key, $weight-value);
+      }
+
+      .p-f-#{$value}-#{$weight-key} {
+        @include padding($key, $weight-value);
+      }
+    } @else {
+      .m-f-#{$weight-key} {
+        @include margin($key, $weight-value);
+      }
+
+      .p-f-#{$weight-key} {
+        @include padding($key, $weight-value);
+      }
+    }
+  }
+
+  @each $weight-key, $weight-value in $variable-spacers {
+    @if ($key != "all") {
+      .m-v-#{$value}-#{$weight-key} {
+        @include margin($key, $weight-value);
+      }
+
+      .p-v-#{$value}-#{$weight-key} {
+        @include padding($key, $weight-value);
+      }
+    } @else {
+      .m-v-#{$weight-key} {
+        @include margin($key, $weight-value);
+      }
+
+      .p-v-#{$weight-key} {
+        @include padding($key, $weight-value);
+      }
+    }
+  }
+}
+
+// @each $key, $value in $fixed-spacers {
+//   /// Helpers - Fixed Spacers - Margins
+//   .m-f-#{$key} {
+//     margin-top: var(--size-f-#{$key});
+//     margin-right: var(--size-f-#{$key});
+//     margin-bottom: var(--size-f-#{$key});
+//     margin-left: var(--size-f-#{$key});
+//   }
+
+//   .m-f-x-#{$key} {
+//     margin-right: var(--size-f-#{$key});
+//     margin-left: var(--size-f-#{$key});
+//   }
+
+//   .m-f-y-#{$key} {
+//     margin-top: var(--size-f-#{$key});
+//     margin-bottom: var(--size-f-#{$key});
+//   }
+
+//   .m-f-block-#{$key} {
+//     margin-block: var(--size-f-#{$key});
+//   }
+
+//   .m-f-inline-#{$key} {
+//     margin-inline: var(--size-f-#{$key});
+//   }
+
+//   .m-f-t-#{$key} {
+//     margin-top: var(--size-f-#{$key});
+//   }
+
+//   .m-f-r-#{$key} {
+//     margin-right: var(--size-f-#{$key});
+//   }
+
+//   .m-f-b-#{$key} {
+//     margin-bottom: var(--size-f-#{$key});
+//   }
+
+//   .m-f-l-#{$key} {
+//     margin-left: var(--size-f-#{$key});
+//   }
+
+//   /// Helpers - Fixed Spacers - Paddings
+//   .p-f-#{$key} {
+//     padding-top: var(--size-f-#{$key});
+//     padding-right: var(--size-f-#{$key});
+//     padding-bottom: var(--size-f-#{$key});
+//     padding-left: var(--size-f-#{$key});
+//   }
+
+//   .p-f-x-#{$key} {
+//     padding-right: var(--size-f-#{$key});
+//     padding-left: var(--size-f-#{$key});
+//   }
+
+//   .p-f-y-#{$key} {
+//     padding-top: var(--size-f-#{$key});
+//     padding-bottom: var(--size-f-#{$key});
+//   }
+
+//   .p-f-block-#{$key} {
+//     padding-block: var(--size-f-#{$key});
+//   }
+
+//   .p-f-inline-#{$key} {
+//     padding-inline: var(--size-f-#{$key});
+//   }
+
+//   .p-f-t-#{$key} {
+//     padding-top: var(--size-f-#{$key});
+//   }
+
+//   .p-f-r-#{$key} {
+//     padding-right: var(--size-f-#{$key});
+//   }
+
+//   .p-f-b-#{$key} {
+//     padding-bottom: var(--size-f-#{$key});
+//   }
+
+//   .p-f-l-#{$key} {
+//     padding-left: var(--size-f-#{$key});
+//   }
+// }
+
+// /// Helpers - Variable Spacers
+// @each $key, $value in $variable-spacers {
+//   /// Helpers - Variable Spacers - Margins
+//   .m-v-#{$key} {
+//     margin-top: var(--size-v-#{$key});
+//     margin-right: var(--size-v-#{$key});
+//     margin-bottom: var(--size-v-#{$key});
+//     margin-left: var(--size-v-#{$key});
+//   }
+
+//   .m-v-x-#{$key} {
+//     margin-right: var(--size-v-#{$key});
+//     margin-left: var(--size-v-#{$key});
+//   }
+
+//   .m-v-y-#{$key} {
+//     margin-top: var(--size-v-#{$key});
+//     margin-bottom: var(--size-v-#{$key});
+//   }
+
+//   .m-v-block-#{$key} {
+//     margin-block: var(--size-v-#{$key});
+//   }
+
+//   .m-v-inline-#{$key} {
+//     margin-inline: var(--size-v-#{$key});
+//   }
+
+//   .m-v-t-#{$key} {
+//     margin-top: var(--size-v-#{$key});
+//   }
+
+//   .m-v-r-#{$key} {
+//     margin-right: var(--size-v-#{$key});
+//   }
+
+//   .m-v-b-#{$key} {
+//     margin-bottom: var(--size-v-#{$key});
+//   }
+
+//   .m-v-l-#{$key} {
+//     margin-left: var(--size-v-#{$key});
+//   }
+
+//   /// Helpers - Variable Spacers - Paddings
+//   .p-v-#{$key} {
+//     padding-top: var(--size-v-#{$key});
+//     padding-right: var(--size-v-#{$key});
+//     padding-bottom: var(--size-v-#{$key});
+//     padding-left: var(--size-v-#{$key});
+//   }
+
+//   .p-v-x-#{$key} {
+//     padding-right: var(--size-v-#{$key});
+//     padding-left: var(--size-v-#{$key});
+//   }
+
+//   .p-v-y-#{$key} {
+//     padding-top: var(--size-v-#{$key});
+//     padding-bottom: var(--size-v-#{$key});
+//   }
+
+//   .p-v-block-#{$key} {
+//     padding-block: var(--size-v-#{$key});
+//   }
+
+//   .p-v-inline-#{$key} {
+//     padding-inline: var(--size-v-#{$key});
+//   }
+
+//   .p-v-t-#{$key} {
+//     padding-top: var(--size-v-#{$key});
+//   }
+
+//   .p-v-r-#{$key} {
+//     padding-right: var(--size-v-#{$key});
+//   }
+
+//   .p-v-b-#{$key} {
+//     padding-bottom: var(--size-v-#{$key});
+//   }
+
+//   .p-v-l-#{$key} {
+//     padding-left: var(--size-v-#{$key});
+//   }
+// }
 
 /// Box Shadows
 @each $key, $value in $box-shadow-directions {
