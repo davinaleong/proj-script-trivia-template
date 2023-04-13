@@ -192,11 +192,12 @@ $text-transforms: (
 
 /// Breakpoints
 $breakpoints: (
-  "phone": 18.75em,
-  "phone-l": 37.5em,
-  "tablet": 56.25em,
-  "desktop": 75em,
-  "desktop-l": 100em,
+  "xs": 0,
+  "sm": 36em,
+  "md": 48em,
+  "lg": 62em,
+  "xl": 75em,
+  "xxl": 87.5em,
 );
 
 /// Spacers

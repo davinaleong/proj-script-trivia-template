@@ -1,3 +1,6 @@
+/// Components
+
+/// Components - Icons
 .icon {
     --icon-fz: var(--fz-md);
     --icon-clr: var(--clr-gray-900);
@@ -20,16 +23,26 @@
     --icon-bg-clr: var(--clr-success-800);
 }
 
+/// Components - Containers
+.answers {
+  container-name: answers;
+  container-type: inline-size;
+}
+
 .card-grid {
     --card-grid-gap: var(--size-v-400);
 
+    container-name: cardGrid;
+    container-type: inline-size;
     display: flex;
     flex-wrap: wrap;
     gap: var(--card-grid-gap);
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/// Componenets
-
+/// Componenets - Cards
 .card {
     --card-clr: var(--clr-gray-900);
     --card-bg-clr: var(--clr-gray-100);
@@ -39,7 +52,7 @@
     --card-hover-bg-clr: var(--clr-primary-500);
     --card-hover-img-border: 0.01em solid var(--clr-primary-500);
 
-    --card-width: 30%;
+    --card-width: 100%;
     --card-padding: var(--size-v-400);
     --card-border-radius: var(--size-v-400);
 
@@ -90,4 +103,25 @@
 .card-success {
     --card-bg-clr: var(--clr-success-100);
     --card-img-border: 0.01em solid var(--clr-success-100);
+}
+
+/// Components - Queries
+@container answers (min-width: #{breakpoint('md')}) {
+    .btn-icon {
+        &__label {
+            display: block;
+        }
+    }
+}
+
+@container cardGrid (min-width: #{breakpoint('sm')}) {
+    .card {
+        --card-width: 45%;
+    }
+}
+
+@container cardGrid (min-width: #{breakpoint('lg')}) {
+    .card {
+        --card-width: 30%;
+    }
 }

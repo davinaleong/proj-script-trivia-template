@@ -62,3 +62,13 @@
     --btn-hover-clr: var(--clr-gray-50);
     --btn-hover-bg-clr: var(--clr-success-300);
 }
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-icon {
+    &__label {
+        display: none;
+    }
+}
