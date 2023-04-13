@@ -3,20 +3,25 @@
 /// Typography - General
 a,
 .a {
-  --anchor-clr: var(--clr-secondary-400);
-  --anchor-hover-clr: var(--clr-secondary-300);
+  --anchor-clr: var(--clr-primary-500);
+  --anchor-hover-clr: var(--clr-primary-800);
 
   color: var(--anchor-clr);
-  transition: color 0.3s ease-in-out;
+  text-decoration: none;
 
   &:hover {
     color: var(--anchor-hover-clr);
   }
 
+  &.card {
+    --anchor-clr: var(--clr-gray-900);
+    --anchor-hover-clr: var(--clr-gray-50);
+  }
+
   @each $key, $value in $colors {
     &.link-#{$key} {
-      --anchor-clr: color($key, "400");
-      --anchor-hover-clr: color($key, "300");
+      --anchor-clr: color($key, "500");
+      --anchor-hover-clr: color($key, "800");
     }
   }
 }

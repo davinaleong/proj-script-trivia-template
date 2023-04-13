@@ -31,11 +31,15 @@
 .card {
     --card-clr: var(--clr-gray-900);
     --card-bg-clr: var(--clr-gray-100);
+    --card-img-border: 0.01em solid var(--clr-gray-400);
+
+    --card-hover-clr: var(--clr-gray-50);
+    --card-hover-bg-clr: var(--clr-primary-500);
+    --card-hover-img-border: 0.01em solid var(--clr-primary-500);
 
     --card-width: 30%;
     --card-padding: var(--size-v-400);
     --card-border-radius: var(--size-v-400);
-    --card-img-border: 0.01em solid var(--clr-gray-400);
 
     max-width: var(--card-width);
     color: var(--card-clr);
@@ -43,12 +47,11 @@
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     position: relative;
-    cursor: pointer;
 
     &:hover {
-        --card-clr: var(--clr-gray-50);
-        --card-bg-clr: var(--clr-primary-500);
-        --card-img-border: 0.01em solid var(--clr-primary-500);
+        --card-clr: var(--card-hover-clr);
+        --card-bg-clr: var(--card-hover-bg-clr);
+        --card-img-border: var(--card-hover-img-border);
     }
 
     .icon-card {
