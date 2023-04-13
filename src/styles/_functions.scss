@@ -79,10 +79,10 @@
 }
 
 /// Functions - Breakpoints
-@function breakpoint($breakpoint, $offset: 0em) {
+@function breakpoint($breakpoint, $offset: 0) {
   $value: map-get($breakpoints, $breakpoint);
   @if ($value) {
-    @return calc($value + $offset);
+    @return $value + $offset;
   } @else {
     @error "breakpoint: #{$breakpoint} not found.";
   }
@@ -107,51 +107,3 @@
   }
 }
 
-/// Functions - Box Shadow
-// @function box-shadow($direction, $weight, $blur: 1.5) {
-//   $x: 0;
-//   $y: 0;
-//   $this-blur: $weight * $blur;
-
-//   @if ($direction == "top") {
-//     $x: 0;
-//     $y: $weight * -1;
-//   }
-
-//   @if ($direction == "top-right") {
-//     $x: $weight;
-//     $y: $weight * -1;
-//   }
-
-//   @if ($direction == "right") {
-//     $x: $weight;
-//     $y: 0;
-//   }
-
-//   @if ($direction == "bottom-right") {
-//     $x: $weight;
-//     $y: $weight;
-//   }
-
-//   @if ($direction == "bottom") {
-//     $x: 0;
-//     $y: $weight;
-//   }
-
-//   @if ($direction == "bottom-left") {
-//     $x: $weight * -1;
-//     $y: $weight;
-//   }
-
-//   @if ($direction == "left") {
-//     $x: $weight * -1;
-//     $y: 0;
-//   }
-
-//   @if ($direction == "top-left") {
-//     $x: $weight * -1;
-//     $y: $weight * -1;
-//   }
-
-//   @return $x $y $this-blur hsla(0, 0%, 0%, 0.5);
-// }

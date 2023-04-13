@@ -161,7 +161,7 @@
 }
 
 /// Buttons - Queries
-@media screen and (min-width: #{breakpoint('md')}) {
+@media screen and (min-width: #{breakpoint("lg")}) {
     .btn-icon {
         &__label {
             display: block;

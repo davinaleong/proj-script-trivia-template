@@ -24,18 +24,7 @@
 }
 
 /// Components - Containers
-.answers-grid {
-    --answers-bg-clr: var(--clr-gray-100);
-    --answers-grid-align-items: end;
-    --answers-grid-justify-content: space-between;
-
-    display: flex;
-    align-items: var(--answers-grid-align-items);
-    justify-content: var(--answers-grid-justify-content);
-    background-color: var(--answers-bg-clr);
-}
-
-.card-grid {
+.cards-grid {
     --card-grid-gap: var(--size-v-400);
 
     container-name: cardGrid;
@@ -59,15 +48,17 @@
     --card-hover-img-border: 0.01em solid var(--clr-primary-500);
 
     --card-width: 100%;
-    --card-padding: var(--size-v-400);
-    --card-border-radius: var(--size-v-400);
+    --card-padding: var(--size-v-200);
+    --card-border-radius: var(--size-v-300);
 
     max-width: var(--card-width);
     color: var(--card-clr);
     background-color: var(--card-bg-clr);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
+    border: none;
     position: relative;
+    cursor: pointer;
 
     &:hover {
         --card-clr: var(--card-hover-clr);
@@ -117,15 +108,11 @@
     --alert-clr: var(--clr-gray-900);
     --alert-bg-clr: var(--clr-gray-100);
 
-    --alert-size: #{breakpoint('sm') * 0.6};
+    --alert-size: #{breakpoint("sm") * 0.6};
     --alert-padding: var(--size-v-300);
     --alert-border-radius: var(--size-v-300);
     --alert-offset: var(--size-v-400);
 
-    position: fixed;
-    top: var(--alert-offset);
-    max-width: var(--alert-size);
-    isolation: isolate;
     color: var(--alert-clr);
     background-color: var(--alert-bg-clr);
     border-radius: var(--alert-border-radius);
@@ -134,20 +121,38 @@
     padding-bottom: var(--alert-padding);
     padding-left: var(--alert-padding);
 
+    &-fixed {
+        position: fixed;
+        z-index: 4;
+        isolation: isolate;
+        top: var(--alert-offset);
+        max-width: var(--alert-size);
+    }
+
+    &-primary {
+        --alert-clr: var(--clr-gray-100);
+        --alert-bg-clr: var(--clr-primary-700);
+    }
+
     &-danger {
         --alert-clr: var(--clr-gray-100);
         --alert-bg-clr: var(--clr-danger-800);
     }
-}
 
-/// Components - Queries
-@container cardGrid (min-width: #{breakpoint('sm')}) {
-    .card {
-        --card-width: 45%;
+    &-success {
+        --alert-clr: var(--clr-gray-100);
+        --alert-bg-clr: var(--clr-success-800);
     }
 }
 
-@container cardGrid (min-width: #{breakpoint('lg')}) {
+/// Components - Queries
+@container cardGrid (min-width: #{breakpoint("sm")}) {
+    .card {
+        --card-width: 49%;
+    }
+}
+
+@container cardGrid (min-width: #{breakpoint("lg")}) {
     .card {
         --card-width: 30%;
     }
