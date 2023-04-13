@@ -39,6 +39,33 @@
     }
 }
 
+.btn-fixed {
+    --btn-offset: var(--size-v-400);
+
+    position: fixed;
+    z-index: 3;
+
+    &-top {
+        top: var(--btn-offset);
+        bottom: auto;
+    }
+
+    &-bottom {
+        top: auto;
+        bottom: var(--btn-offset);
+    }
+
+    &-left {
+        left: var(--btn-offset);
+        right: auto;
+    }
+
+    &-right {
+        left: auto;
+        right: var(--btn-offset);
+    }
+}
+
 .btn-primary {
     --btn-clr: var(--clr-gray-50);
     --btn-bg-clr: var(--clr-primary-700);
@@ -127,7 +154,7 @@
 }
 
 /// Buttons - Queries
-@container main (min-width: #{breakpoint('sm')}) {
+@media screen and (min-width: #{breakpoint('md')}) {
     .btn-icon {
         &__label {
             display: block;

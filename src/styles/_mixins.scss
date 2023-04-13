@@ -1,0 +1,50 @@
+/// Mixins
+
+/// Mixins - Box Shadow
+@mixin box-shadow($direction, $weight, $blur: 1.5) {
+    $x: 0;
+    $y: 0;
+    $this-blur: $weight * $blur;
+
+    @if ($direction == "t") {
+        $x: 0;
+        $y: $weight * -1;
+    }
+
+    @if ($direction == "tr") {
+        $x: $weight;
+        $y: $weight * -1;
+    }
+
+    @if ($direction == "r") {
+        $x: $weight;
+        $y: 0;
+    }
+
+    @if ($direction == "br") {
+        $x: $weight;
+        $y: $weight;
+    }
+
+    @if ($direction == "b") {
+        $x: 0;
+        $y: $weight;
+    }
+
+    @if ($direction == "bl") {
+        $x: $weight * -1;
+        $y: $weight;
+    }
+
+    @if ($direction == "l") {
+        $x: $weight * -1;
+        $y: 0;
+    }
+
+    @if ($direction == "tl") {
+        $x: $weight * -1;
+        $y: $weight * -1;
+    }
+
+    box-shadow: $x $y $this-blur hsla(0, 0%, 0%, 0.5);
+}

@@ -247,3 +247,40 @@ $displays: (
   "inline-grid": inline-grid,
 );
 
+/// Box Shadows
+$box-shadow-directions: (
+  "top": "t",
+  "top-right": "tr",
+  "right": "r",
+  "bottom-right": "br",
+  "bottom": "b",
+  "bottom-left": "bl",
+  "left": "l",
+  "top-left": "tl"
+);
+
+$box-shadow-f-weights: (
+  "50": 0.01rem,
+  "100": 0.03rem,
+  "200": 0.05rem,
+  "300": 0.1rem,
+  "400": 0.15rem,
+  "500": 0.2rem,
+  "600": 0.25rem,
+  "700": 0.5rem,
+  "800": 0.75rem,
+  "900": 1rem,
+);
+
+$box-shadow-v-weights: (
+  "50": 0.01em,
+  "100": 0.03em,
+  "200": 0.05em,
+  "300": 0.1em,
+  "400": 0.15em,
+  "500": 0.2em,
+  "600": 0.25em,
+  "700": 0.5em,
+  "800": 0.75em,
+  "900": 1em,
+);

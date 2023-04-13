@@ -308,3 +308,18 @@
     padding-left: var(--size-v-#{$key});
   }
 }
+
+/// Box Shadows
+@each $key, $value in $box-shadow-directions {
+  @each $weight-key, $weight-value in $box-shadow-f-weights {
+    .shadow-f-#{$value}-f-#{$weight-key} {
+      @include box-shadow($value, $weight-value);
+    }
+  }
+
+  @each $weight-key, $weight-value in $box-shadow-v-weights {
+    .shadow-v-#{$value}-#{$weight-key} {
+      @include box-shadow($value, $weight-value);
+    }
+  }
+}
