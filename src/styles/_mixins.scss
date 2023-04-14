@@ -136,3 +136,87 @@
 
     box-shadow: $x $y $this-blur hsla(0, 0%, 0%, 0.5);
 }
+
+/// Mixins - Border Radius
+@mixin border-radius($direction, $weight) {
+    @if ($direction == "all") {
+        border-top-left-radius: $weight;
+        border-top-right-radius: $weight;
+        border-bottom-right-radius: $weight;
+        border-bottom-left-radius: $weight;
+    }
+
+    @if ($direction == "top") {
+        border-top-left-radius: $weight;
+        border-top-right-radius: $weight;
+    }
+
+    @if ($direction == "right") {
+        border-top-right-radius: $weight;
+        border-bottom-right-radius: $weight;
+    }
+
+    @if ($direction == "bottom") {
+        border-bottom-right-radius: $weight;
+        border-bottom-left-radius: $weight;
+    }
+
+    @if ($direction == "left") {
+        border-top-left-radius: $weight;
+        border-bottom-left-radius: $weight;
+    }
+
+    @if ($direction == "top-left") {
+        border-top-left-radius: $weight;
+    }
+
+    @if ($direction == "top-right") {
+        border-top-right-radius: $weight;
+    }
+
+    @if ($direction == "bottom-right") {
+        border-bottom-right-radius: $weight;
+    }
+
+    @if ($direction == "bottom-left") {
+        border-bottom-left-radius: $weight;
+    }
+}
+
+/// Mixins - Borders
+@mixin border($direction, $weight, $color, $style: solid) {
+    $border: $weight $style $color;
+
+    @if ($direction == "all") {
+        border-top: $border;
+        border-right: $border;
+        border-bottom: $border;
+        border-left: $border;
+    }
+
+    @if ($direction == "x") {
+        border-right: $border;
+        border-left: $border;
+    }
+
+    @if ($direction == "y") {
+        border-top: $border;
+        border-bottom: $border;
+    }
+
+    @if ($direction == "top") {
+        border-top: $border;
+    }
+
+    @if ($direction == "right") {
+        border-right: $border;
+    }
+
+    @if ($direction == "bottom") {
+        border-bottom: $border;
+    }
+
+    @if ($direction == "left") {
+        border-left: $border;
+    }
+}

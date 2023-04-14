@@ -35,37 +35,34 @@
 /// Helpers - Border Colors
 @each $key, $value in $colors {
   @each $tint-key, $tint-value in $value {
-    .border-#{$key}-#{$tint-key} {
-      border-top: thin solid var(--clr-#{$key}-#{$tint-key});
-      border-right: thin solid var(--clr-#{$key}-#{$tint-key});
-      border-bottom: thin solid var(--clr-#{$key}-#{$tint-key});
-      border-left: thin solid var(--clr-#{$key}-#{$tint-key});
-    }
+    @each $direction-key, $direction-value in $border-directions {
+      @each $style-key, $style-value in $border-styles {
 
-    .border-#{$key}-#{$tint-key}-x {
-      border-right: thin solid var(--clr-#{$key}-#{$tint-key});
-      border-left: thin solid var(--clr-#{$key}-#{$tint-key});
-    }
+        @each $weight-key, $weight-value in $border-f-weights {
+          @if ($direction-key == "all") {
+            .border-f-#{$style-key}-#{$weight-key}-#{$key}-#{$tint-key} {
+              @include border($direction-key, $weight-value, $tint-value, $style-value);
+            }
+          } @else {
+            .border-f-#{$direction-value}-#{$style-key}-#{$weight-key}-#{$key}-#{$tint-key} {
+              @include border($direction-key, $weight-value, $tint-value, $style-value);
+            }
+          }
+        }
 
-    .border-#{$key}-#{$tint-key}-y {
-      border-top: thin solid var(--clr-#{$key}-#{$tint-key});
-      border-bottom: thin solid var(--clr-#{$key}-#{$tint-key});
-    }
+        @each $weight-key, $weight-value in $border-v-weights {
+          @if ($direction-key == "all") {
+            .border-v-#{$style-key}-#{$weight-key}-#{$key}-#{$tint-key} {
+              @include border($direction-key, $weight-value, $tint-value, $style-value);
+            }
+          } @else {
+            .border-v-#{$direction-value}-#{$style-key}-#{$weight-key}-#{$key}-#{$tint-key} {
+              @include border($direction-key, $weight-value, $tint-value, $style-value);
+            }
+          }
+        }
 
-    .border-#{$key}-#{$tint-key}-t {
-      border-top: thin solid var(--clr-#{$key}-#{$tint-key});
-    }
-
-    .border-#{$key}-#{$tint-key}-r {
-      border-right: thin solid var(--clr-#{$key}-#{$tint-key});
-    }
-
-    .border-#{$key}-#{$tint-key}-b {
-      border-bottom: thin solid var(--clr-#{$key}-#{$tint-key});
-    }
-
-    .border-#{$key}-#{$tint-key}-l {
-      border-left: thin solid var(--clr-#{$key}-#{$tint-key});
+      }
     }
   }
 }
@@ -215,180 +212,7 @@
   }
 }
 
-// @each $key, $value in $fixed-spacers {
-//   /// Helpers - Fixed Spacers - Margins
-//   .m-f-#{$key} {
-//     margin-top: var(--size-f-#{$key});
-//     margin-right: var(--size-f-#{$key});
-//     margin-bottom: var(--size-f-#{$key});
-//     margin-left: var(--size-f-#{$key});
-//   }
-
-//   .m-f-x-#{$key} {
-//     margin-right: var(--size-f-#{$key});
-//     margin-left: var(--size-f-#{$key});
-//   }
-
-//   .m-f-y-#{$key} {
-//     margin-top: var(--size-f-#{$key});
-//     margin-bottom: var(--size-f-#{$key});
-//   }
-
-//   .m-f-block-#{$key} {
-//     margin-block: var(--size-f-#{$key});
-//   }
-
-//   .m-f-inline-#{$key} {
-//     margin-inline: var(--size-f-#{$key});
-//   }
-
-//   .m-f-t-#{$key} {
-//     margin-top: var(--size-f-#{$key});
-//   }
-
-//   .m-f-r-#{$key} {
-//     margin-right: var(--size-f-#{$key});
-//   }
-
-//   .m-f-b-#{$key} {
-//     margin-bottom: var(--size-f-#{$key});
-//   }
-
-//   .m-f-l-#{$key} {
-//     margin-left: var(--size-f-#{$key});
-//   }
-
-//   /// Helpers - Fixed Spacers - Paddings
-//   .p-f-#{$key} {
-//     padding-top: var(--size-f-#{$key});
-//     padding-right: var(--size-f-#{$key});
-//     padding-bottom: var(--size-f-#{$key});
-//     padding-left: var(--size-f-#{$key});
-//   }
-
-//   .p-f-x-#{$key} {
-//     padding-right: var(--size-f-#{$key});
-//     padding-left: var(--size-f-#{$key});
-//   }
-
-//   .p-f-y-#{$key} {
-//     padding-top: var(--size-f-#{$key});
-//     padding-bottom: var(--size-f-#{$key});
-//   }
-
-//   .p-f-block-#{$key} {
-//     padding-block: var(--size-f-#{$key});
-//   }
-
-//   .p-f-inline-#{$key} {
-//     padding-inline: var(--size-f-#{$key});
-//   }
-
-//   .p-f-t-#{$key} {
-//     padding-top: var(--size-f-#{$key});
-//   }
-
-//   .p-f-r-#{$key} {
-//     padding-right: var(--size-f-#{$key});
-//   }
-
-//   .p-f-b-#{$key} {
-//     padding-bottom: var(--size-f-#{$key});
-//   }
-
-//   .p-f-l-#{$key} {
-//     padding-left: var(--size-f-#{$key});
-//   }
-// }
-
-// /// Helpers - Variable Spacers
-// @each $key, $value in $variable-spacers {
-//   /// Helpers - Variable Spacers - Margins
-//   .m-v-#{$key} {
-//     margin-top: var(--size-v-#{$key});
-//     margin-right: var(--size-v-#{$key});
-//     margin-bottom: var(--size-v-#{$key});
-//     margin-left: var(--size-v-#{$key});
-//   }
-
-//   .m-v-x-#{$key} {
-//     margin-right: var(--size-v-#{$key});
-//     margin-left: var(--size-v-#{$key});
-//   }
-
-//   .m-v-y-#{$key} {
-//     margin-top: var(--size-v-#{$key});
-//     margin-bottom: var(--size-v-#{$key});
-//   }
-
-//   .m-v-block-#{$key} {
-//     margin-block: var(--size-v-#{$key});
-//   }
-
-//   .m-v-inline-#{$key} {
-//     margin-inline: var(--size-v-#{$key});
-//   }
-
-//   .m-v-t-#{$key} {
-//     margin-top: var(--size-v-#{$key});
-//   }
-
-//   .m-v-r-#{$key} {
-//     margin-right: var(--size-v-#{$key});
-//   }
-
-//   .m-v-b-#{$key} {
-//     margin-bottom: var(--size-v-#{$key});
-//   }
-
-//   .m-v-l-#{$key} {
-//     margin-left: var(--size-v-#{$key});
-//   }
-
-//   /// Helpers - Variable Spacers - Paddings
-//   .p-v-#{$key} {
-//     padding-top: var(--size-v-#{$key});
-//     padding-right: var(--size-v-#{$key});
-//     padding-bottom: var(--size-v-#{$key});
-//     padding-left: var(--size-v-#{$key});
-//   }
-
-//   .p-v-x-#{$key} {
-//     padding-right: var(--size-v-#{$key});
-//     padding-left: var(--size-v-#{$key});
-//   }
-
-//   .p-v-y-#{$key} {
-//     padding-top: var(--size-v-#{$key});
-//     padding-bottom: var(--size-v-#{$key});
-//   }
-
-//   .p-v-block-#{$key} {
-//     padding-block: var(--size-v-#{$key});
-//   }
-
-//   .p-v-inline-#{$key} {
-//     padding-inline: var(--size-v-#{$key});
-//   }
-
-//   .p-v-t-#{$key} {
-//     padding-top: var(--size-v-#{$key});
-//   }
-
-//   .p-v-r-#{$key} {
-//     padding-right: var(--size-v-#{$key});
-//   }
-
-//   .p-v-b-#{$key} {
-//     padding-bottom: var(--size-v-#{$key});
-//   }
-
-//   .p-v-l-#{$key} {
-//     padding-left: var(--size-v-#{$key});
-//   }
-// }
-
-/// Box Shadows
+/// Helpers - Box Shadows
 @each $key, $value in $box-shadow-directions {
   @each $weight-key, $weight-value in $box-shadow-f-weights {
     .shadow-f-#{$value}-f-#{$weight-key} {
@@ -399,6 +223,33 @@
   @each $weight-key, $weight-value in $box-shadow-v-weights {
     .shadow-v-#{$value}-#{$weight-key} {
       @include box-shadow($value, $weight-value);
+    }
+  }
+}
+
+/// Helpers - Border Radius
+@each $key, $value in $border-radius-directions {
+  @each $weight-key, $weight-value in $fixed-spacers {
+    @if ($key == "all") {
+      .br-f-#{$weight-key} {
+        @include border-radius($key, $weight-value);
+      }
+    } @else {
+      .br-f-#{$value}-f-#{$weight-key} {
+        @include border-radius($key, $weight-value);
+      }
+    }
+  }
+
+  @each $weight-key, $weight-value in $variable-spacers {
+    @if ($key == "all") {
+      .br-v-#{$weight-key} {
+        @include border-radius($key, $weight-value);
+      }
+    } @else {
+      .br-v-#{$value}-f-#{$weight-key} {
+        @include border-radius($key, $weight-value);
+      }
     }
   }
 }

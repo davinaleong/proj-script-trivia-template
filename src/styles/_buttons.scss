@@ -16,6 +16,7 @@
     --btn-fw: var(--fw-bold);
     --btn-tt: uppercase;
     --btn-offset: var(--size-v-400);
+    --btn-opacity: 1;
 
     display: inline-flex;
     align-items: center;
@@ -32,11 +33,24 @@
     padding-right: var(--btn-padding);
     border: none;
     border-radius: var(--btn-border-radius);
+    opacity: var(--btn-opacity);
     cursor: pointer;
 
     &:hover {
         color: var(--btn-hover-clr);
         background-color: var(--btn-hover-bg-clr);
+    }
+
+    &[disabled] {
+        --btn-clr: var(--clr-gray-500);
+        --btn-bg-clr: var(--clr-gray-200);
+
+        --btn-hover-clr: var(--clr-gray-500);
+        --btn-hover-bg-clr: var(--clr-gray-200);
+
+        --btn-opacity: 0.8;
+        
+        cursor: not-allowed;
     }
 
     &-top {

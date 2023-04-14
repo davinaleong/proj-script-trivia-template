@@ -204,7 +204,7 @@ $breakpoints: (
 /// Spacers
 /// Spacers - Direction
 $spacer-directions: (
-  "all": "",
+  "all": "all",
   "block": "block",
   "inline": "inline",
   "x": "x",
@@ -261,7 +261,8 @@ $displays: (
   "inline-grid": inline-grid,
 );
 
-/// Flex/Grid Alignments
+/// Flex/Grid
+/// Flex/Grid - Align Items
 $grid-flex-align-items: (
   "inital": inital,
   "inherit": inherit,
@@ -275,6 +276,7 @@ $grid-flex-align-items: (
   "flex-end": flex-end,
 );
 
+/// Flex/Grid - Justify Contents
 $flex-justify-contents: (
   "inital": inital,
   "inherit": inherit,
@@ -286,6 +288,7 @@ $flex-justify-contents: (
   "flex-end": flex-end,
 );
 
+/// Flex/Grid - Justify Items
 $grid-justify-items: (
   "inital": inital,
   "inherit": inherit,
@@ -301,6 +304,7 @@ $grid-justify-items: (
   "baseline-alignment": baseline-alignment,
 );
 
+/// Flex/Grid - Flex Wraps
 $flex-wraps: (
   "nowrap": nowrap,
   "wrap": wrap,
@@ -308,6 +312,7 @@ $flex-wraps: (
 );
 
 /// Box Shadows
+/// Box Shadows - Directions
 $box-shadow-directions: (
   "top": "t",
   "top-right": "tr",
@@ -319,6 +324,7 @@ $box-shadow-directions: (
   "top-left": "tl"
 );
 
+/// Box Shadows - Fixed Weights
 $box-shadow-f-weights: (
   "50": 0.01rem,
   "100": 0.03rem,
@@ -332,7 +338,76 @@ $box-shadow-f-weights: (
   "900": 1rem,
 );
 
+/// Box Shadows - Variable Weights
 $box-shadow-v-weights: (
+  "50": 0.01em,
+  "100": 0.03em,
+  "200": 0.05em,
+  "300": 0.1em,
+  "400": 0.15em,
+  "500": 0.2em,
+  "600": 0.25em,
+  "700": 0.5em,
+  "800": 0.75em,
+  "900": 1em,
+);
+
+/// Border Radius
+/// Border Radius - Directions
+$border-radius-directions: (
+  "all": "all",
+  "top": "t",
+  "top-right": "tr",
+  "right": "r",
+  "bottom-right": "br",
+  "bottom": "b",
+  "bottom-left": "bl",
+  "left": "l",
+  "top-left": "tl"
+);
+
+/// Border
+/// Border - Directions
+$border-directions: (
+  "all": "all",
+  "x": "x",
+  "y": "y",
+  "top": "t",
+  "right": "r",
+  "bottom": "b",
+  "left": "l",
+);
+
+/// Border - Styles
+$border-styles: (
+  "none": none,
+  "hidden": hidden,
+  "dotted": dotted,
+  "dashed": dashed,
+  "solid": solid,
+  "double": double,
+  "groove": groove,
+  "ridge": ridge,
+  "inset": inset,
+  "outset": outset,
+);
+
+/// Border - Fixed Weights
+$border-f-weights: (
+  "50": 0.01rem,
+  "100": 0.03rem,
+  "200": 0.05rem,
+  "300": 0.1rem,
+  "400": 0.15rem,
+  "500": 0.2rem,
+  "600": 0.25rem,
+  "700": 0.5rem,
+  "800": 0.75rem,
+  "900": 1rem,
+);
+
+/// Border - Variable Weights
+$border-v-weights: (
   "50": 0.01em,
   "100": 0.03em,
   "200": 0.05em,
