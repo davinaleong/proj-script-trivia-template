@@ -4,8 +4,8 @@
     --btn-clr: var(--clr-gray-900);
     --btn-bg-clr: var(--clr-gray-400);
 
-    --btn-hover-clr: var(--clr-gray-900);
-    --btn-hover-bg-clr: var(--clr-gray-300);
+    --btn-hover-clr: var(--clr-gray-50);
+    --btn-hover-bg-clr: var(--clr-primary-500);
 
     --btn-padding: var(--size-v-300);
     --btn-gap: var(--size-v-300);
@@ -72,58 +72,117 @@
         left: auto;
         right: var(--btn-offset);
     }
-}
 
-.btn-no-padding {
-    --btn-padding: 0;
-}
+    &-no-padding {
+        --btn-padding: 0;
+    }
+    
+    &-fixed {
+        position: fixed;
+        z-index: 3;
+        isolation: isolate;
+    
+    }
+    
+    &-absolute {
+        position: absolute;
+        z-index: 3;
+        isolation: isolate;
+    }
+    
+    &-primary {
+        --btn-clr: var(--clr-gray-50);
+        --btn-bg-clr: var(--clr-primary-700);
+    
+        --btn-hover-clr: var(--clr-gray-50);
+        --btn-hover-bg-clr: var(--clr-primary-500);
+    }
+    
+    &-danger {
+        --btn-clr: var(--clr-gray-50);
+        --btn-bg-clr: var(--clr-danger-800);
+    
+        --btn-hover-clr: var(--clr-gray-50);
+        --btn-hover-bg-clr: var(--clr-danger-300);
+    }
+    
+    &-success {
+        --btn-clr: var(--clr-gray-50);
+        --btn-bg-clr: var(--clr-success-800);
+    
+        --btn-hover-clr: var(--clr-gray-50);
+        --btn-hover-bg-clr: var(--clr-success-300);
+    }
 
-.btn-fixed {
-    position: fixed;
-    z-index: 3;
-    isolation: isolate;
+    &-gray {
+        --btn-clr: var(--clr-gray-900);
+        --btn-bg-clr: var(--clr-gray-400);
 
-}
-
-.btn-absolute {
-    position: absolute;
-    z-index: 3;
-    isolation: isolate;
-}
-
-.btn-primary {
-    --btn-clr: var(--clr-gray-50);
-    --btn-bg-clr: var(--clr-primary-700);
-
-    --btn-hover-clr: var(--clr-gray-50);
-    --btn-hover-bg-clr: var(--clr-primary-500);
-}
-
-.btn-danger {
-    --btn-clr: var(--clr-gray-50);
-    --btn-bg-clr: var(--clr-danger-800);
-
-    --btn-hover-clr: var(--clr-gray-50);
-    --btn-hover-bg-clr: var(--clr-danger-300);
-}
-
-.btn-success {
-    --btn-clr: var(--clr-gray-50);
-    --btn-bg-clr: var(--clr-success-800);
-
-    --btn-hover-clr: var(--clr-gray-50);
-    --btn-hover-bg-clr: var(--clr-success-300);
-}
-
-.btn-full {
-    width: 100%;
-}
-
-.btn-icon {
-    &__label {
-        display: none;
+        --btn-hover-clr: var(--clr-gray-900);
+        --btn-hover-bg-clr: var(--clr-gray-300);
+    }
+    
+    &-full {
+        width: 100%;
+    }
+    
+    &-icon {
+        &__label {
+            display: none;
+        }
     }
 }
+
+// .btn-no-padding {
+//     --btn-padding: 0;
+// }
+
+// .btn-fixed {
+//     position: fixed;
+//     z-index: 3;
+//     isolation: isolate;
+
+// }
+
+// .btn-absolute {
+//     position: absolute;
+//     z-index: 3;
+//     isolation: isolate;
+// }
+
+// .btn-primary {
+//     --btn-clr: var(--clr-gray-50);
+//     --btn-bg-clr: var(--clr-primary-700);
+
+//     --btn-hover-clr: var(--clr-gray-50);
+//     --btn-hover-bg-clr: var(--clr-primary-500);
+// }
+
+// .btn-danger {
+//     --btn-clr: var(--clr-gray-50);
+//     --btn-bg-clr: var(--clr-danger-800);
+
+//     --btn-hover-clr: var(--clr-gray-50);
+//     --btn-hover-bg-clr: var(--clr-danger-300);
+// }
+
+// .btn-success {
+//     --btn-clr: var(--clr-gray-50);
+//     --btn-bg-clr: var(--clr-success-800);
+
+//     --btn-hover-clr: var(--clr-gray-50);
+//     --btn-hover-bg-clr: var(--clr-success-300);
+// }
+
+// .btn-full {
+//     width: 100%;
+// }
+
+// .btn-icon {
+//     &__label {
+//         display: none;
+//     }
+// }
 
 /// Buttons - Containers
 .btn-container {

@@ -15,6 +15,9 @@
     <script defer src="./src/scripts/main.js"></script>
 </head>
 <body class="quiz-body">
+    <a href="./index.html" class="btn btn-icon btn-fixed btn-top btn-left shadow-v-br-300">
+        <i class="fa-solid fa-chevron-left"></i> <p class="btn-icon__label">Back</p>
+    </a>
     <button type="button" class="btn btn-primary btn-icon btn-fixed btn-top btn-right shadow-v-br-300" data-element="btn-help">
         <p class="btn-icon__label">Help</p>
         <i class="fa-solid fa-question"></i>
@@ -74,7 +77,7 @@
                     <h3 class="fw-black fz-lg">HTML</h3>
                     
                     <div class="d-flex al-center jc-center gap-v-400">
-                        <button type="button" class="btn btn-icon">
+                        <button type="button" class="btn btn-icon" data-element="btn-answer">
                             <p class="btn-icon__label">Answers</p>
                             <i class="fa-solid fa-brightness"></i>
                         </button>
@@ -85,7 +88,7 @@
                     <h3 class="fw-black fz-lg">CSS</h3>
         
                     <div class="d-flex al-center jc-center gap-v-400">
-                        <button type="button" class="btn btn-icon">
+                        <button type="button" class="btn btn-icon" data-element="btn-answer">
                             <p class="btn-icon__label">Answers</p>
                             <i class="fa-solid fa-brightness"></i>
                         </button>
@@ -96,7 +99,7 @@
                     <h3 class="fw-black fz-lg">JS</h3>
         
                     <div class="d-flex al-center jc-center gap-v-400">
-                        <button type="button" class="btn btn-icon">
+                        <button type="button" class="btn btn-icon" data-element="btn-answer">
                             <p class="btn-icon__label">Answers</p>
                             <i class="fa-solid fa-brightness"></i>
                         </button>
@@ -107,7 +110,7 @@
                     <h3 class="fw-black fz-lg">PHP</h3>
         
                     <div class="d-flex al-center jc-center gap-v-400">
-                        <button type="button" class="btn btn-icon">
+                        <button type="button" class="btn btn-icon" data-element="btn-answer">
                             <p class="btn-icon__label">Answers</p>
                             <i class="fa-solid fa-brightness"></i>
                         </button>
@@ -137,6 +140,34 @@
                 <li>Answers are unique&ndash;means no duplicate answers.</li>
                 <li>Do <a href="./contact.html">contact us</a> if you face any technical issues.</li>
             </ul>
+        </div>
+    </div>
+
+    <div class="modal" data-element="options-modal">
+        <button type="button" class="btn btn-danger btn-icon btn-fixed btn-top btn-right shadow-v-br-300" data-element="btn-close-modal">
+            <p class="btn-icon__content">Close</p> <i class="fa-solid fa-times"></i>
+        </button>
+
+        <div class="container | br-v-300 bg-gray-50 p-v-400 shadow-v-br-300">
+            <h2 class="fz-lg fw-bold ta-center m-v-b-400">Pick Options</h2>
+
+            <div class="d-flex al-center jc-center gap-v-400">
+                <button type="button" class="btn fz-lg fw-black">
+                    <p class="btn-icon__label">A</p>
+                </button>
+
+                <button type="button" class="btn fz-lg fw-black">
+                    <p class="btn-icon__label">B</p>
+                </button>
+
+                <button type="button" class="btn fz-lg fw-black">
+                    <p class="btn-icon__label">C</p>
+                </button>
+
+                <button type="button" class="btn fz-lg fw-black">
+                    <p class="btn-icon__label">D</p>
+                </button>
+            </div>
         </div>
     </div>
 

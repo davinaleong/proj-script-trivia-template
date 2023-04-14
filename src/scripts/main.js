@@ -11,12 +11,14 @@ const alertEls = document.querySelectorAll(getDataElementAttr(`alert`))
 
 // Buttons
 const btnOptionEls = document.querySelectorAll(getDataElementAttr(`btn-option`))
+const btnAnwserEls = document.querySelectorAll(getDataElementAttr(`btn-answer`))
 const btnHelpEl = document.querySelector(getDataElementAttr(`btn-help`))
 
 // Modals
 const modalEls = document.querySelectorAll(`.modal`)
 const helpModalEl = document.querySelector(getDataElementAttr(`help-modal`))
 const imageModalEl = document.querySelector(getDataElementAttr(`image-modal`))
+const optionsModalEl = document.querySelector(getDataElementAttr(`options-modal`))
 
 alertEls.forEach(function (alertEl) {
     const btnCloseAlertEl = alertEl.querySelector(getDataElementAttr(`btn-close-alert`))
@@ -34,6 +36,13 @@ btnOptionEls.forEach(function (btnOptionEl) {
     btnOptionEl.addEventListener(`click`, function(event) {
         event.preventDefault()
         btnOptionEl.toggleAttribute(dataActiveAttr, true)
+    })
+})
+
+btnAnwserEls.forEach(function (btnAnswerEl) {
+    btnAnswerEl.addEventListener(`click`, function (event) {
+        event.preventDefault()
+        optionsModalEl.setAttribute(dataActiveAttr, true)
     })
 })
 
