@@ -14,6 +14,7 @@
     border-radius: var(--icon-border-radius);
     width: var(--icon-size);
     height: var(--icon-size);
+    font-size: var(--icon-fz);
     display: grid;
     place-items: center;
 }
@@ -21,6 +22,11 @@
 .icon-success {
     --icon-clr: var(--clr-gray-50);
     --icon-bg-clr: var(--clr-success-800);
+}
+
+.icon-finished {
+    --icon-fz: var(--fz-xxl);
+    --icon-size: clamp(5rem, 1rem + 2vw, 9.375rem);
 }
 
 /// Components - Containers

@@ -137,6 +137,7 @@ $font-sizes: (
   "md": clamp(1rem, 1rem + 2vw, 1.25rem), // 16px / 20px
   "lg": clamp(1.5rem, 1rem + 2vw, 2.25rem), // 24px / 36px
   "xl": clamp(3rem, 1rem + 2vw, 4rem), // 48px / 64px
+  "xxl": clamp(3.125rem, 1rem + 3vw, 5.875rem), // 48px / 64px
 );
 
 /// Fonts - Font Weights

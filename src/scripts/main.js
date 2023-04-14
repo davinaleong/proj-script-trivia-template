@@ -1,5 +1,13 @@
 console.log('main.js loaded')
 
+const finishedMessages = [
+    "Congratulations!",
+    "Well done!",
+    "Good job!",
+    "You're a real pro!",
+    "You aced that quiz!"
+]
+
 const classActive = `active`
 const classDNone = `d-none`
 
@@ -32,10 +40,16 @@ alertEls.forEach(function (alertEl) {
 })
 
 btnOptionEls.forEach(function (btnOptionEl) {
-    btnOptionEl.classList.remove(classActive)
+    toggleElement(btnOptionEl)
+
     btnOptionEl.addEventListener(`click`, function(event) {
         event.preventDefault()
-        btnOptionEl.toggleAttribute(dataActiveAttr, true)
+
+        btnOptionEls.forEach(function (btnOptionEl) {
+            btnOptionEl.removeAttribute(dataActiveAttr)
+        })
+
+        btnOptionEl.setAttribute(dataActiveAttr, true)
     })
 })
 
