@@ -27,6 +27,7 @@ const modalEls = document.querySelectorAll(`.modal`)
 const helpModalEl = document.querySelector(getDataElementAttr(`help-modal`))
 const imageModalEl = document.querySelector(getDataElementAttr(`image-modal`))
 const optionsModalEl = document.querySelector(getDataElementAttr(`options-modal`))
+const finishedHeadingEl = document.querySelector(getDataElementAttr(`finished-heading`))
 
 alertEls.forEach(function (alertEl) {
     const btnCloseAlertEl = alertEl.querySelector(getDataElementAttr(`btn-close-alert`))
@@ -60,6 +61,11 @@ btnAnwserEls.forEach(function (btnAnswerEl) {
     })
 })
 
+if (finishedHeadingEl) {
+    finishedHeadingEl.innerHTML = getFinishedMessage()
+}
+
+/// Modals
 modalEls.forEach(function (modalEl) {
     modalEl.removeAttribute(dataActiveAttr)
 
@@ -106,4 +112,8 @@ function toggleElement(element, toggle = false) {
             element.removeAttribute(dataActiveAttr)
         }
     }
+}
+
+function getFinishedMessage() {
+    return finishedMessages[Math.floor(Math.random() * finishedMessages.length)]
 }
