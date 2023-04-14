@@ -70,19 +70,19 @@
         padding-bottom: $weight;
     }
 
-    @if ($direction == "t") {
+    @if ($direction == "top") {
         padding-top: $weight;
     }
 
-    @if ($direction == "r") {
+    @if ($direction == "right") {
         padding-right: $weight;
     }
 
-    @if ($direction == "b") {
+    @if ($direction == "bottom") {
         padding-bottom: $weight;
     }
 
-    @if ($direction == "l") {
+    @if ($direction == "left") {
         padding-left: $weight;
     }
 }

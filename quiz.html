@@ -15,7 +15,7 @@
     <script defer src="./src/scripts/main.js"></script>
 </head>
 <body class="quiz-body">
-    <button type="button" class="btn btn-primary btn-icon btn-fixed btn-top btn-right shadow-v-br-300">
+    <button type="button" class="btn btn-primary btn-icon btn-fixed btn-top btn-right shadow-v-br-300" data-element="btn-help">
         <p class="btn-icon__label">Help</p>
         <i class="fa-solid fa-question"></i>
     </button>
@@ -118,12 +118,26 @@
         </aside>
     </div>
 
-    <div class="modal" data-element="help-modal" data-active="true">
+    <div class="modal" data-element="help-modal">
         <button type="button" class="btn btn-danger btn-icon btn-fixed btn-top btn-right shadow-v-br-300" data-element="btn-close-modal">
             <p class="btn-icon__content">Close</p> <i class="fa-solid fa-times"></i>
         </button>
 
-        <div class="container | br-v-300 bg-primary-100 p-v-300"></div>
+        <div class="container | br-v-300 bg-primary-200 p-v-400 shadow-v-br-300">
+            <h2 class="ff-secondary fz-lg ta-center m-v-b-300">Quiz Guide</h2>
+
+            <ol class="p-v-l-400 m-v-b-500">
+                <li>Tap/click on the answer button next to the option. This will show an options popup.</li>
+                <li>Tap/click on the option to choose it as the answer.</li>
+            </ol>
+
+            <h3 class="fw-bold fz-md m-v-b-300">Notes:</h3>
+
+            <ul class="p-v-l-400">
+                <li>Answers are unique&ndash;means no duplicate answers.</li>
+                <li>Do <a href="./contact.html">contact us</a> if you face any technical issues.</li>
+            </ul>
+        </div>
     </div>
 
     <div class="modal" data-element="image-modal">

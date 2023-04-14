@@ -8,7 +8,14 @@ const dataActiveAttr = `data-active`
 const srcAttr = `src`
 
 const alertEls = document.querySelectorAll(getDataElementAttr(`alert`))
+
+// Buttons
 const btnOptionEls = document.querySelectorAll(getDataElementAttr(`btn-option`))
+const btnHelpEl = document.querySelector(getDataElementAttr(`btn-help`))
+
+// Modals
+const modalEls = document.querySelectorAll(`.modal`)
+const helpModalEl = document.querySelector(getDataElementAttr(`help-modal`))
 const imageModalEl = document.querySelector(getDataElementAttr(`image-modal`))
 
 alertEls.forEach(function (alertEl) {
@@ -30,15 +37,25 @@ btnOptionEls.forEach(function (btnOptionEl) {
     })
 })
 
-if (imageModalEl) {
-    imageModalEl.removeAttribute(dataActiveAttr)
+modalEls.forEach(function (modalEl) {
+    modalEl.removeAttribute(dataActiveAttr)
 
-    const btnCloseModalEl = imageModalEl.querySelector(getDataElementAttr(`btn-close-modal`))
+    const btnCloseModalEl = modalEl.querySelector(getDataElementAttr(`btn-close-modal`))
     btnCloseModalEl.addEventListener(`click`, function (event) {
         event.preventDefault()
-        imageModalEl.removeAttribute(dataActiveAttr)
+        modalEl.removeAttribute(dataActiveAttr)
     })
+})
 
+if(btnHelpEl && helpModalEl) {
+    btnHelpEl.addEventListener(`click`, function (event) {
+        event.preventDefault()
+
+        helpModalEl.setAttribute(dataActiveAttr, true)
+    })
+}
+
+if (imageModalEl) {
     const modalImgEl = imageModalEl.querySelector(getDataElementAttr(`image-modal-img`))
     const imgEls = document.querySelectorAll(`img`)
     imgEls.forEach(function (imgEl) {
