@@ -20,7 +20,18 @@
   padding-bottom: 0;
   padding-left: 0;
 
-  font: inherit;
+  // font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal;
+  text-align: left;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
