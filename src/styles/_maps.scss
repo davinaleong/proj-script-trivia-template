@@ -3,7 +3,7 @@
 /// Palatte
 $palatte: (
   "gray-50": (
-    "hex": #FFFFFF,
+    "hex": #ffffff,
     "hsl": hsl(0, 0%, 100%),
   ),
   "gray-900": (
@@ -11,19 +11,19 @@ $palatte: (
     "hsl": hsl(0, 0%, 0%),
   ),
   "gray-100": (
-    "hex": #F5F5F5,
+    "hex": #f5f5f5,
     "hsl": hsl(0, 0%, 96%),
   ),
   "gray-200": (
-    "hex": #EEEEEE,
+    "hex": #eeeeee,
     "hsl": hsl(0, 0%, 93%),
   ),
   "gray-300": (
-    "hex": #DDDDDD,
+    "hex": #dddddd,
     "hsl": hsl(0, 0%, 87%),
   ),
   "gray-400": (
-    "hex": #CCCCCC,
+    "hex": #cccccc,
     "hsl": hsl(0, 0%, 80%),
   ),
   "gray-500": (
@@ -31,19 +31,19 @@ $palatte: (
     "hsl": hsl(0, 0%, 60%),
   ),
   "primary-200": (
-    "hex": #2188FF,
+    "hex": #2188ff,
     "hsl": hsl(212, 100%, 56%),
   ),
   "primary-400": (
-    "hex": #005CC5,
+    "hex": #005cc5,
     "hsl": hsl(212, 100%, 39%),
   ),
   "success-50": (
-    "hex": #CBEED5,
+    "hex": #cbeed5,
     "hsl": hsl(137, 51%, 86%),
   ),
   "success-200": (
-    "hex": #62E185,
+    "hex": #62e185,
     "hsl": hsl(137, 68%, 63%),
   ),
   "success-400": (
@@ -51,11 +51,11 @@ $palatte: (
     "hsl": hsl(137, 76%, 31%),
   ),
   "danger-200": (
-    "hex": #F9707B,
+    "hex": #f9707b,
     "hsl": hsl(355, 92%, 71%),
   ),
   "danger-400": (
-    "hex": #CB2431,
+    "hex": #cb2431,
     "hsl": hsl(355, 70%, 47%),
   ),
 );
@@ -68,9 +68,11 @@ $colors: (
     "200": hsl(212, 100%, 93%),
     "300": hsl(212, 100%, 88%),
     "400": hsl(212, 100%, 74%),
-    "500": hsl(212, 100%, 56%), // Primary Hover
+    "500": hsl(212, 100%, 56%),
+    // Primary Hover
     "600": hsl(212, 100%, 46%),
-    "700": hsl(212, 100%, 39%), // Primary
+    "700": hsl(212, 100%, 39%),
+    // Primary
     "800": hsl(212, 100%, 26%),
     "900": hsl(212, 100%, 10%),
   ),
@@ -79,7 +81,8 @@ $colors: (
     "100": hsl(46, 95%, 93%),
     "200": hsl(46, 95%, 83%),
     "300": hsl(46, 95%, 73%),
-    "400": hsl(46, 95%, 63%), // Warning
+    "400": hsl(46, 95%, 63%),
+    // Warning
     "500": hsl(46, 95%, 53%),
     "600": hsl(46, 95%, 43%),
     "700": hsl(46, 95%, 33%),
@@ -87,39 +90,49 @@ $colors: (
     "900": hsl(46, 95%, 13%),
   ),
   "gray": (
-    "50": hsl(0, 0%, 100%), // White
-    "100": hsl(0, 0%, 96%), // Sidebar Background
+    "50": hsl(0, 0%, 100%),
+    // White
+    "100": hsl(0, 0%, 96%),
+    // Sidebar Background
     "200": hsl(0, 0%, 93%),
-    "300": hsl(0, 0%, 87%), // Answer Hover
-    "400": hsl(0, 0%, 80%), // Answer
+    "300": hsl(0, 0%, 87%),
+    // Answer Hover
+    "400": hsl(0, 0%, 80%),
+    // Answer
     "500": hsl(0, 0%, 60%),
     "600": hsl(0, 0%, 46%),
     "700": hsl(0, 0%, 38%),
     "800": hsl(0, 0%, 26%),
-    "900": hsl(0, 0%, 0%),  // Black
+    "900": hsl(0, 0%, 0%),
+    // Black
   ),
   "danger": (
     "50": hsl(355, 100%, 96%),
     "100": hsl(355, 100%, 90%),
     "200": hsl(355, 73%, 77%),
-    "300": hsl(355, 69%, 67%), // Danger Hover
+    "300": hsl(355, 69%, 67%),
+    // Danger Hover
     "400": hsl(355, 83%, 63%),
     "500": hsl(355, 90%, 58%),
     "600": hsl(355, 77%, 55%),
     "700": hsl(355, 65%, 51%),
-    "800": hsl(355, 70%, 47%), // Danger
+    "800": hsl(355, 70%, 47%),
+    // Danger
     "900": hsl(355, 73%, 41%),
   ),
   "success": (
     "50": hsl(137, 39%, 94%),
-    "100": hsl(137, 38%, 84%), // Success Background
+    "100": hsl(137, 38%, 84%),
+    // Success Background
     "200": hsl(137, 37%, 74%),
-    "300": hsl(137, 38%, 64%), // Success Hover
+    "300": hsl(137, 38%, 64%),
+    // Success Hover
     "400": hsl(137, 38%, 57%),
     "500": hsl(137, 39%, 49%),
     "600": hsl(137, 41%, 45%),
     "700": hsl(137, 43%, 39%),
-    "800": hsl(137, 76%, 31%), // Success
+    "800": hsl(137, 76%, 31%),
+    // Success
     "900": hsl(137, 55%, 24%),
   ),
 );
@@ -127,17 +140,25 @@ $colors: (
 /// Fonts
 /// Fonts - Font Families
 $font-families: (
-  "primary": #{Inter, Arial, sans-serif},
-  "secondary": #{"Indie Flower", "Comic Sans", sans-serif},
+  "primary": #{Inter,
+  Arial,
+  sans-serif},
+  "secondary": #{"Indie Flower",
+  "Comic Sans",
+  sans-serif},
 );
 
 /// Fonts - Font Sizes
 $font-sizes: (
   "base": 16px,
-  "md": clamp(1rem, 1rem + 2vw, 1.25rem), // 16px / 20px
-  "lg": clamp(1.5rem, 1rem + 2vw, 2.25rem), // 24px / 36px
-  "xl": clamp(3rem, 1rem + 2vw, 4rem), // 48px / 64px
-  "xxl": clamp(3.125rem, 1rem + 2.5vw, 5.875rem), // 48px / 64px
+  "md": clamp(1rem, 1rem + 2vw, 1.25rem),
+  // 16px / 20px
+  "lg": clamp(1.5rem, 1rem + 2vw, 2.25rem),
+  // 24px / 36px
+  "xl": clamp(2.5rem, 1rem + 2vw, 4rem),
+  // 48px / 64px
+  "xxl": clamp(3.125rem, 1rem + 2.5vw, 5.875rem),
+  // 48px / 64px
 );
 
 /// Fonts - Font Weights
@@ -322,7 +343,7 @@ $box-shadow-directions: (
   "bottom": "b",
   "bottom-left": "bl",
   "left": "l",
-  "top-left": "tl"
+  "top-left": "tl",
 );
 
 /// Box Shadows - Fixed Weights
@@ -364,7 +385,7 @@ $border-radius-directions: (
   "bottom": "b",
   "bottom-left": "bl",
   "left": "l",
-  "top-left": "tl"
+  "top-left": "tl",
 );
 
 /// Border
